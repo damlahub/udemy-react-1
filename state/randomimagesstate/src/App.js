@@ -4,7 +4,8 @@ import { useState } from 'react';
 
 function getRandomCourse(){
   const courseArray=['Angular','Bootstrap', 'CSharp', 'KompleWeb'];
-  return courseArray[Math.floor(Math.random()*courseArray.length)];
+  const randomNumber = courseArray[Math.floor(Math.random()*courseArray.length)];
+  return randomNumber;
 }
 
 function App() {
@@ -12,14 +13,14 @@ function App() {
   const handleClick= ()=>{
     setCourses([...courses, getRandomCourse()]);
   }
-  const courseList= courses.map((course, inddex)=>{
-    return <Course key={inddex} courseName={course}/>
+  const courseList= courses.map((course, index)=>{
+    return <Course key={index} courseName={course}/>
    });
 
   return (
     <div className="App">
       <button className='btn' onClick={handleClick}>Random Kurs Ekle</button>
-      <div>{courseList}</div>
+      <div className='courseList'>{courseList}</div>
     </div>
   );
 }

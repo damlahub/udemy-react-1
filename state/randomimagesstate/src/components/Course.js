@@ -12,7 +12,7 @@ const courseMap={
 
 const Course = ({courseName}) => {
   return (
-    <div>
+    <div className='courseItem'>
       <img src={courseMap[courseName]} alt=""/>
     </div>
   )

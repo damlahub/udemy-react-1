@@ -1,5 +1,29 @@
+.App{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .btn{
     background-color: transparent;
     padding: 5px;
+    margin: 20px;
     font-weight: bolder;
+}
+.courseList{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+.courseItem{
+    width: 32%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+.courseItem img{
+    width: 90%;
 }
